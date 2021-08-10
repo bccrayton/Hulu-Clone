@@ -1,3 +1,4 @@
+/* eslint-disable react/display-name */
 import { ThumbUpIcon } from "@heroicons/react/outline";
 import Image from "next/image";
 import { forwardRef } from "react";
@@ -16,6 +17,7 @@ const Thumbnail = forwardRef(({ result }, ref) => {
           `${BASE_URL}${result.backdrop_path || result.poster_path}` ||
           `${BASE_URL}${result.poster_path}`
         }
+        alt={result.title || result.original_name}
         height={1080}
         width={1920}
       />
